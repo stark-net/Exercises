@@ -1,18 +1,15 @@
 n = int(input("Enter number of the columns of matrix: "))
-m = [[0] * n for _ in range(n)]     #Matrix
-for j in range(n):
-    print(f"Enter values of row {j}: ")     #To show which row does user assign value to.
-    for i in range(n):
-        while(True):
-            try:
-                index_value = int(input(f"\tValue of column[{i}] of matrix in binary: "))
-                if index_value in [0, 1]:
-                    m[j][i] = index_value
-                    break
-                else:
-                    raise ValueError("The value number, must be 0 or 1 !")
-            except:
-                print("Enter Number in the correct form (0 or 1)")
+m = [[0] * n for _ in range(n)]
+for row in range(n):
+    while(True):
+        try:
+            value = input(f"Enter value of row ({row}): ")
+            m[row] = value
+            break
+        except:
+            print("Enter number in correct form(1 or 0)")
 else:
-    for row in m:
-        print(" ".join(map(str, row)))
+    for j in m:
+        for i in j:
+            print(i, end=' ')
+        print()
