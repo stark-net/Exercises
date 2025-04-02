@@ -31,12 +31,10 @@ for row in range(n):
     
 sum_of_row = [sum(row) for row in m]
 
-print("OK" if all(map(is_even, sum_of_row)) else "Corrupt")
-
-
-
-'''print("\nThe matrix is:\n")                                                                                                                                                                                                                                    
+print("\nThe matrix is:\n")                                                                                                                                                                                                                                    
 for j in m:                                                                                                                                                                                                                               
     for i in j:                                                                                                                                                                                                                           
         print(i, end=' ')                                                                                                                                                                                                                 
-    print()'''
+    print()
+
+print("\nOK" if all(map(is_even, sum_of_row)) else "\nCorrupt")
