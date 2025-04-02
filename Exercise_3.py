@@ -12,13 +12,16 @@ for row in range(n):
     while(True):                                                                                                                                                                                                                              
         try:                                                                                                                                                                                                                                  
             value = input(f"Enter value of row {row} (only 1 and 0, without spaces): ")                                                                                                                                                       
+            if value == "0":
+                print("\n\tThe program stopped by user.")
+                break
             if any(i not in "01" for i in value) or len(value) != n:                                                                                                                                                                          
                 raise ValueError("\tYour entered number is not valid. Please make sure about it.")                                                                                                                                              
             m[row] = [int(i) for i in value]                                                                                                                                                                                                  
             break                                                                                                                                                                                                                             
         except ValueError as error:                                                                                                                                                                                                           
             print(error)                                                                                                                                                                                                                      
-    if value == 0:                                                                                                                                                                                                                           
+    if value == "0":                                                                                                                                                                                                                           
         break
     
     
