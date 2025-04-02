@@ -8,6 +8,25 @@ for row in range(n):
             break
         except:
             print("Enter number in correct form(1 or 0)")
+
+for j in m:
+    for i in j:
+        Integer_value_of_i = int(i)
+        if Integer_value_of_i in [1,0]:
+            pass
+        else:
+            print("Your entered number is not binary")
+
+for j in m:
+    for i in j:
+        Integer_value_of_i = int(i)
+        if Integer_value_of_i == 1:
+            c++
+
+
+
+
+
 else:
     for j in m:
         for i in j:
