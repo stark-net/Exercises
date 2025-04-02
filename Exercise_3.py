@@ -6,8 +6,7 @@ def is_even(x):
     
 n = int(input("Enter number of the columns of matrix: "))                                                                                                                                                                                     
 m = [[0] * n for _ in range(n)]   
-sum_of_row = []    
-m_int = []                                                                                                                                                                                                        
+sum_of_row = []                                                                                                                                                                                                         
 
 for row in range(n):                                                                                                                                                                                                                          
     while(True):                                                                                                                                                                                                                              
@@ -21,12 +20,6 @@ for row in range(n):
             print(error)                                                                                                                                                                                                                      
     if value == 0:                                                                                                                                                                                                                           
         break
-
-'''for i in range(len(m)):
-    sum_of_index = 0
-    for j in range(len(m[i])):
-        sum_of_index += int(m[i][j])
-    sum_of_row.append([sum_of_index])'''
     
     
 sum_of_row = [sum(row) for row in m]
