@@ -12,4 +12,8 @@ while True:
         continue
     text += line
 result = re.findall("ab+c", text)
-print("\n".join(result))
+if result:
+    print("\nThe matches:")
+    print("\n".join(result))
+else:
+    print("\nNo matches found")
