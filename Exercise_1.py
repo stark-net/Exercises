@@ -29,6 +29,6 @@ for char in plain_text:
         ciphered_text += ciphered_char
     else:
         ciphered_text += char
-print("\nYour ciphered text is:\n"+          ciphered_text)
+print("\nYour ciphered text is:\n" + ciphered_text)
         
             
