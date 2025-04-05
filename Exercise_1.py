@@ -10,10 +10,11 @@ while True:
     if line == "0":
         break
     
-    total_length += len(line)
     if total_length > 100:
         print("Your input is too long")
+        continue
     
+    total_length -= len(line)
     lines.append(line)
 
 plain_text = "\n".join(lines)
