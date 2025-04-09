@@ -14,7 +14,7 @@ while True:
         print("Your input is too long")
         continue
     
-    total_length -= len(line)
+    total_length += len(line)
     lines.append(line)
 
 plain_text = "\n".join(lines)
