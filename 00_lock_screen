@@ -1,0 +1,21 @@
+#!/bin/sh
+# Lock the screen before suspend/hibernate
+
+username="$USERNAME"
+userhome="/home/$username"
+
+export XAUTHORITY="$userhome/.Xauthority"
+export DISPLAY=":0"
+
+case "$1" in
+    suspend|hibernate)
+        su $username -c "/usr/bin/loginctl lock-session" &
+        sleep 3
+        ;;
+    resume|thaw)
+        # Commands to run after waking up (optional)
+        ;;
+    *)
+        exit $NA
+        ;;
+esac
